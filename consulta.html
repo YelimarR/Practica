@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Consulta de estudiante</title>
+</head>
+<body>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,300;0,700;1,500&display=swap');
+
+    body{
+      background-color: #eeeeee;
+      font-family: 'Exo 2', sans-serif;
+    }
+    .signupFrm{
+      width: 70%;
+      background-color: white;
+      border: 1px solid #D6CACA;
+      border-radius: 12px;
+      position: absolute;
+      left: 12%;
+      top: 4em;
+      padding: 30px 30px 60px 60px;
+    }
+
+    #na{
+      display: flex;
+      position: relative;
+    }
+
+    #na #nombre, #apellido{
+      width: 40%;
+      margin-right: 10%;
+    }
+    #nombr{
+      margin-right: 44%;
+    }
+    label{
+      color: #003366;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+    input{
+      background-color: #eeeeee;
+      border: 0;
+      height: 40px;
+      border-radius: 4px;
+    }
+    
+    .inputContainer{
+      width: 100%;
+    }
+
+    .inputContainer input{
+      width: 90%;
+      margin-bottom: 25px;
+      margin-top: 12px;
+    }
+    .inputContainer label{
+      margin-bottom: 12px;
+    }
+
+    button{
+      width: 292px;
+      height: 37px;
+      background-color: #0087cd;
+      border: 0;
+      border-radius: 4px;
+      font-weight: bold;
+      font-size: 16px;
+      color: white;
+
+    }
+    .contenedor{
+      padding-left: 16%;
+      margin-top: 12px;
+    }
+    #Btn{
+      margin-right: 20px;
+    }
+  </style>
+  <div>
+    <h1>Consulta de estudiante</h1>
+    <form action="/consulta" method="post">
+      <label for="nombreEstudiante">Nombre del estudiante:</label>
+      <input type="text" id="nombreEstudiante" name="nombreEstudiante">
+      <div class="contenedor">
+
+        <button type="button" onclick="location.href='/'" id="Btn">Regresar</button>
+        <button type="submit">Consultar</button>
+      </div>
+    </form>
+  </div>
+
+    <br>
+    <br>
+
+  <div >
+  <h1>Modificar estudiante</h1>
+
+  <form action="/modificar" method="get">
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" value="<%= nombre %>">
+  <br><br>
+    <label for="apellido">Apellido:</label>
+    <input type="text" id="apellido" name="apellido" value="<%= apellido %>">
+  <br><br>
+    <label for="carrera">Carrera:</label>
+    <input type="text" id="carrera" name="carrera" value="<%= carrera %>">
+  <br><br>
+    <label for="pais">País:</label>
+    <input type="text" id="pais" name="pais" value="<%= pais %>">
+  <br><br>
+    <label for="departamento">Departamento:</label>
+    <input type="text" id="departamento" name="departamento" value="<%= departamento %>">
+  <br><br>
+    <label for="ciudad">Ciudad:</label>
+    <input type="text" id="ciudad" name="ciudad" value="<%= ciudad %>">
+  <br><br>
+    <label for="direccion">Dirección:</label>
+    <input type="text" id="direccion" name="direccion" value="<%= direccion %>">
+  <br><br>
+    <label for="celular">Celular:</label>
+    <input type="text" id="celular" name="celular" value="<%= celular %>">
+  <br><br>
+    <label for="correo">Correo:</label>
+    <input type="text" id="correo" name="correo" value="<%= correo %>">
+    
+    <div class="contenedor">
+        <button type="button" onclick="location.href='/consulta'" id="Btn">Regresar</button>
+        <button type="submit">Actualizar</button>
+    </div>
+  </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+    <html>
+      <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet/css" href="style.css">
+        <title>Agregar Estudiante</title>
+      </head>
+      <body>
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,300;0,700;1,500&display=swap');
+
+          body{
+            background-color: #eeeeee;
+            font-family: 'Exo 2', sans-serif;
+          }
+          .signupFrm{
+            width: 70%;
+            background-color: white;
+            border: 1px solid #D6CACA;
+            border-radius: 12px;
+            position: absolute;
+            left: 12%;
+            top: 4em;
+            padding: 30px 30px 60px 60px;
+          }
+
+          #na{
+            display: flex;
+            position: relative;
+          }
+
+          #na #nombre, #apellido{
+            width: 40%;
+            margin-right: 10%;
+          }
+          #nombr{
+            margin-right: 44%;
+          }
+          label{
+            color: #003366;
+            font-weight: bold;
+            margin-bottom: 12px;
+          }
+          input{
+            background-color: #eeeeee;
+            border: 0;
+            height: 40px;
+            border-radius: 4px;
+          }
+          .inputContainer{
+            width: 100%;
+          }
+          .inputContainer input{
+            width: 90%;
+            margin-bottom: 25px;
+            margin-top: 12px;
+          }
+          .inputContainer label{
+            margin-bottom: 12px;
+          }
+          button{
+            width: 292px;
+            height: 37px;
+            background-color: #0087cd;
+            border: 0;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 16px;
+            color: white;
+
+          }
+          .contenedor{
+            padding-left: 16%;
+            margin-top: 12px;
+          }
+          #Btn{
+            margin-right: 20px;
+          }
+
+        </style>
+        <div class="signupFrm">
+
+          <form action="estudiantes/index" method="POST">
+          <h1>Agregar Estudiante</h1>
+
+            <div id="na">
+              <label for="nombre" id="nombr">Nombre:</label>
+              <label for="apellido" class="label">Apellido:</label>
+            </div>
+
+            <div id="na">
+              <input type="text" class="input" id="nombre" name="nombre" placeholder="Nombre" required>
+              <input type="text" class="input" id="apellido" name="apellido" placeholder="Apellido" required>
+            </div><br>
+
+            <div class="inputContainer">
+              <label for="carrera" class="label">Carrera:</label><br>
+              <input type="text" class="input" id="carrera" name="carrera" placeholder="Carrera" required>
+            </div>
+
+            <div class="inputContainer">
+              <label for="pais" class="label">Pais:</label><br>
+              <input type="text" class="input" id="pais" name="pais" placeholder="Pais" required>
+            </div>
+
+            <div class="inputContainer">
+              <label for="departamento" class="label">Departamento:</label><br>
+              <input type="text" class="input" id="departamento" name="departamento" placeholder="Departamento" required>
+            </div>
+
+            <div class="inputContainer">
+              <label for="ciudad" class="label">Ciudad:</label><br>
+              <input type="text" class="input" id="ciudad" name="ciudad" placeholder="Ciudad" required>
+            </div>
+
+            <div class="inputContainer">
+              <label for="direccion" class="label">Direccion:</label><br>
+              <input type="text" class="input" id="direccion" name="direccion" placeholder="Direccion" required>
+            </div>
+
+            <div class="inputContainer">
+              <label for="celular" class="label">Celular:</label><br>
+              <input type="text" class="input" id="celular" name="celular" placeholder="Celular" required>
+            </div>
+
+            <div class="inputContainer">
+              <label for="correo" class="label">Correo:</label><br>
+              <input type="email" class="input" id="correo" name="correo" placeholder="Correo" required>
+            </div>
+
+            <div class="contenedor">
+              <button type="button" onclick="location.href='/'" id="Btn">Regresar</button>
+              <button type="submit" class="submitBtn">Agregar</button>
+            </div>
+          </form>
+        </div>
+      </body>
+    </html>
